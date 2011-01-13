@@ -1,0 +1,14 @@
+[core]
+	excludesfile = /Users/hiphoox/Documents/Dotfiles/git/gitignore_global
+	editor = /usr/local/bin/vim
+[user]
+	name = Norberto Ortigoza
+	email = norberto.ortigoza@gmail.com
+[difftool "Kaleidoscope"]
+	cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"
+[difftool]
+	prompt = false
+[diff]
+	tool = Kaleidoscope
+[color]
+	ui = auto
