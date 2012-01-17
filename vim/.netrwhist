@@ -1,8 +1,2 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
-let g:netrw_dirhist_1='/Users/Norber/Downloads/peepcode-vim-code/ctags-5.8'
-let g:netrw_dirhist_2='/Users/Norber/Projects/Ruby/RubyOnRails/expenses'
-let g:netrw_dirhist_3='/Users/Norber/Projects/Python/alarm'
-let g:netrw_dirhist_4='/Users/hiphoox/Documents/Projects/Ruby/RubyOnRails/project_manager'
-let g:netrw_dirhist_5='/Users/hiphoox/Tmp/bobby-tables'
-let g:netrw_dirhist_6='/Users/hiphoox/Documents/Literature/ebooks/Principles/PeepCode/vim-code/tutorial-apache-files'
+let g:netrw_dirhist_cnt =0

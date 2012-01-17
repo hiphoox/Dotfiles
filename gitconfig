@@ -1,9 +1,24 @@
+[alias]
+  co = checkout
+  # Log display from screencast, with train tracks.
+  l = log --graph --pretty=format':%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset'
+  lol = log --pretty=oneline --abbrev-commit --graph --decorate
+  # Other useful aliases
+  unstage = reset HEAD
+  staged = diff --cached
+  unstaged = diff
+  current-branch = !git symbolic-ref -q HEAD | sed -e 's|^refs/heads/||'
+  # Usage: git track origin/feature-123-login-form
+  track = checkout -t
+[apply]
+  whitespace = warn
 [core]
 	excludesfile = /Users/hiphoox/Documents/Dotfiles/git/gitignore_global
 	editor = /usr/local/bin/vim
+	quotepath = false
 [user]
 	name = Norberto Ortigoza
-	email = norberto.ortigoza@gmail.com
+	email = norberto.ortigoza@raku.mx
 [difftool "Kaleidoscope"]
 	cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"
 [difftool]
@@ -11,4 +26,22 @@
 [diff]
 	tool = Kaleidoscope
 [color]
-	ui = auto
+  diff = auto
+  status = auto
+  branch = auto
+	ui = true
+[help]
+  autocorrect = 1
+[status]
+  submodule = 1
+[push]
+  # Only push branches that have been set up to track a remote branch
+  default = current
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[mergetool]
+	keepBackup = true

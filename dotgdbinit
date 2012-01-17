@@ -1,0 +1,8 @@
+fb objc_exception_throw
+fb malloc_error_break
+fb _NSLockError
+fb NSKVODeallocateBreak
+fb _NSFastEnumerationMutationHandler
+fb malloc_printf
+fb _NSAutoreleaseNoPool
+fb CGErrorBreakpoint
