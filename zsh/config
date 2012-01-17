@@ -2,8 +2,9 @@ autoload -U colors
 colors
 setopt prompt_subst
 PROMPT='
-%m(%n):%~ %{$fg_bold[black]%}$(vcprompt)
+%~ %{$fg[red]%}$(vcprompt)
 → %{$reset_color%}'
+#%m(%n):%~ %{$fg_bold[black]%}$(vcprompt)
 
 # Set RPROMPT to have info show up on the right, too.
 
