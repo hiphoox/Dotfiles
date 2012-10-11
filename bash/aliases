@@ -1,5 +1,7 @@
 # Command Enhancements
 
+alias tmux='tmux -2'
+
 # Utility
 alias reload='source ~/Documents/Dotfiles/bash/aliases'
 alias ea='mate -w ~/Documents/Dotfiles/bash/aliases && reload' # Edit aliases

@@ -4,7 +4,8 @@
 set nocompatible                  " Must come first because it changes other options.
 
 filetype off
-silent! call pathogen#runtime_append_all_bundles()
+"silent! call pathogen#runtime_append_all_bundles()
+call pathogen#infect()
 
 let mapleader = ","
 let g:mapleader = ","
@@ -53,10 +54,14 @@ nnoremap <leader><space> :noh<cr>
 nnoremap <tab> %
 vnoremap <tab> %
 set colorcolumn=100                " Show a colored column at 100 characters 
-nnoremap <up> <C-B>
-nnoremap <down> <C-F>
+"nnoremap <up> <C-B>
+"nnoremap <down> <C-F>
 
-au FocusLost *.* :wa
+" au FocusLost *.* :wa
+"
+" lets close the buffer instead of the window. Specially when using
+" QuickCursor
+nnoremap <leader>fe :w<bar>bd<CR>
 " lets me quickly open up my ~/.vimrc file in a vertically split window so I can add new things
 nnoremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<cr>
 " Strip all trailing whitespace in the current file
@@ -71,12 +76,13 @@ nnoremap <leader>v V`]
 inoremap jj <ESC>
 " Window's commands
 nnoremap <leader>w <C-w>v<C-w>l
+nnoremap <leader>wc <C-w>c
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 nnoremap <leader>a :Ack
-set autochdir                     " Automatically use the current file's directory as the working directory
+" set autochdir                     " Automatically use the current file's directory as the working directory
 
 set wrap                          " Turn on line wrapping.
 set scrolloff=3                   " Show 3 lines of context around the cursor.
@@ -103,7 +109,8 @@ set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{fugitive#statusline()}%{exists('*Cap
 " Or use vividchalk
 " desert
 "
-colorscheme raku
+set t_Co=256
+colorscheme grb256
 
 " Tab mappings.
 map <leader>tt :tabnew<cr>
@@ -127,7 +134,7 @@ vmap <tab> >gv
 vmap <S-Tab> <gv
 "imap <Tab> <C-N>
 "imap <S-Tab> <C-P>
-"map <leader>r :w !ruby \| mvim -c "set nomodified" -<cr>
+map <leader>rr :w !ruby \| vim -c "set nomodified" -<cr>
 map <leader>r :w !ruby <cr>
 map <leader>fr :set filetype=ruby<cr>
 map <leader>fp :set filetype=python<cr>
@@ -150,7 +157,7 @@ autocmd FileType python setlocal foldmethod=indent
 autocmd FileType css  setlocal foldmethod=indent shiftwidth=2 tabstop=2
 autocmd FileType objc setlocal foldmethod=syntax
 "set foldcolumn=1
-set foldlevelstart=0
+set foldlevelstart=3
 nnoremap <Space> za
 vnoremap <Space> za
 

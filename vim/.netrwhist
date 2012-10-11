@@ -1,2 +1,10 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =0
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/Users/hiphoox/Development/Projects/Ruby/Motion/nitron-examples/tasks'
+let g:netrw_dirhist_2='/Users/hiphoox/Development/Projects/Ruby/Motion/BNR/iOSProgramming/01_Quiz'
+let g:netrw_dirhist_3='/Users/hiphoox/Development/Projects/Ruby/providers'
+let g:netrw_dirhist_4='/Users/hiphoox/Development/Projects/C'
+let g:netrw_dirhist_5='/Users/hiphoox'
+let g:netrw_dirhist_6='/Users/hiphoox/Development/Projects/Ruby/Motion/LineLayout'
+let g:netrw_dirhist_7='/Users/hiphoox/Development/Projects/Ruby/Motion/RubyMotionSamples/CircleLayout'
+let g:netrw_dirhist_8='/Users/hiphoox/Development/Code/Ruby/showoff'
