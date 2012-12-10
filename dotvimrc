@@ -11,6 +11,9 @@ let mapleader = ","
 let g:mapleader = ","
 map <Leader>, :NERDTreeToggle<cr>
 
+map <leader>gf :e <cfile><cr>
+map <silent> <leader>cf :call writefile([], expand("<cfile>"), "t")<cr>
+
 syntax enable                     " Turn on syntax highlighting.
 filetype plugin indent on         " Turn on file type detection.
 
